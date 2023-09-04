@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/R.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Heat Map</title>
+  </head>
+  <body>
+    <div id="logo"> <img src="/assets/RETTALOGO.png"> </div>
+    <div id="app">
+      <div id="graph">
+        <div id="chartdiv"></div>
+      </div>
+      <div id="setting_panel">
+        <section id="dataSection">
+          <label for="selectLocationAdd">Tipo de dado:</label>
+          <label> <input type="radio" name="option" value="Cancer"> Cancer </label>
+          <!-- <label> <input type="radio" name="option" value="Crypto"> Crypto </label> -->
+          <div id="cancerOptions" style="display: none;">
+            <label> <input type="radio" name="cancerType" value="Mortes"> Mortes </label>
+            <label> <input type="radio" name="cancerType" value="Incidence"> Incidência </label>
+          </div>        
+        </section>
+        <section id="generateRandom">
+          <button id="randomBtn" alt="Gera Dados Aleatórios ( 15 )">Dados Aleatórios</button>
+        </section>
+
+        <section id="adicionarSection">
+          <label for="selectLocationAdd">Adicionar um dado:</label>
+          <select id="selectLocationAdd"></select>
+          <button id="addBtn">ADICIONAR</button>
+        </section>
+        <section id="removerSection">
+          <label for="selectLocationRemove">Remover um dado:</label>
+          <select id="selectLocationRemove"></select>
+          <button id="removeBtn">REMOVER</button>
+        </section>
+      </div>
+    
+    </div>
+    
+    <script type="module" src="./script.js"></script>
+    <script src="//cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="//cdn.amcharts.com/lib/5/hierarchy.js"></script>
+    <script src="//cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+</body>
+</html>
